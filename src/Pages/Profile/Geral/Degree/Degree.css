@@ -1,0 +1,75 @@
+.gridDegree {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: repeat(3, "auto");
+  grid-template-areas:
+    "avatar university"
+    "avatar course"
+    "avatar yearCourse";
+  align-items: center;
+}
+.divDialog {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: repeat(1, "auto");
+  grid-template-areas: "button title";
+  align-items: center;
+}
+
+.dialogTitle {
+  grid-area: title;
+}
+.buttonBack {
+  grid-area: button;
+}
+
+.gridAvatar {
+  grid-area: avatar;
+  width: 100%;
+  height: initial;
+  margin-left: 10px;
+}
+.gridUniversity {
+  grid-area: university;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 35px;
+  margin-bottom: -5px;
+}
+.gridCourse {
+  grid-area: course;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 29px;
+}
+.gridYearCourse {
+  grid-area: yearCourse;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 26px;
+}
+.title {
+  color: #808080;
+}
+
+.textTitle {
+  text-align: center;
+}
+
+.nameFinishedSubjects {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 35px;
+  margin-bottom: -20px;
+}
+
+.cardNameProject {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 35px;
+}
+
+.cardDescriptionProject {
+  font-size: 15px;
+  font-weight: 400;
+}

@@ -1,0 +1,26 @@
+.container {
+  margin-top: 100px;
+  display: "flex";
+  flex-direction: "column";
+  align-items: "center";
+}
+.title {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  grid-template-areas: "avatar tipTitle";
+}
+.tipTitle {
+  grid-area: tipTitle;
+}
+.avatar {
+  grid-area: avatar;
+  background-color: #f0f0f0;
+}
+.form {
+  width: "100%";
+  margin-top: 20px;
+}
+
+.buttonForm {
+  margin-top: 15px;
+}

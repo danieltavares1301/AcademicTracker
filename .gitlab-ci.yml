@@ -1,0 +1,48 @@
+image: node:10.19.0
+
+variables:
+  STAGING_DOMAIN: staging-academictracker.surge.sh
+  PRODUCTION_DOMAIN: academictracker.surge.sh
+
+stages:
+  - build
+  - deploy staging
+  - deploy production
+
+build website:
+  stage: build
+  script:
+    - npm install
+    - npm run build
+  artifacts:
+    paths:
+      - build/
+
+deploy staging:
+  stage: deploy staging
+
+  environment:
+    name: staging
+    url: https://$STAGING_DOMAIN
+
+  script:
+    - npm install --global surge
+    - cd build
+    - ls -la
+    - mv index.html 200.html
+    - surge --project . --domain https://$STAGING_DOMAIN
+
+deploy production:
+  stage: deploy production
+  allow_failure: false
+  when: manual
+  environment:
+    name: production
+    url: https://$PRODUCTION_DOMAIN
+
+  script:
+    - npm install --global surge
+    - cd build
+    - ls -la
+    - mv index.html 200.html
+    - surge --project . --domain https://$PRODUCTION_DOMAIN

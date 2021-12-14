@@ -1,0 +1,12 @@
+.div {
+  align-self: center;
+  justify-self: center;
+  align-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.nomeUniversidade {
+  font-size: 15px;
+  text-align: start;
+}

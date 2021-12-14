@@ -1,0 +1,46 @@
+.gridExperiences {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: repeat(4, "auto");
+  grid-template-areas:
+    "avatar occupation"
+    "avatar company"
+    "avatar date"
+    "avatar place";
+  align-items: center;
+}
+.gridAvatarCompany {
+  grid-area: avatar;
+  margin-left: 10px;
+}
+.gridOccupation {
+  grid-area: occupation;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 35px;
+  margin-bottom: -5px;
+}
+.gridCompany {
+  grid-area: company;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 29px;
+}
+.gridDate {
+  grid-area: date;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 26px;
+}
+
+.gridPlace {
+  grid-area: place;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 26px;
+}
+
+.cardTitle {
+  font-size: 20px;
+  color: #808080;
+}
